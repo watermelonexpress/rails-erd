@@ -80,6 +80,16 @@ Choice.options do
     desc "Control how edges are represented. See http://www.graphviz.org/doc/info/attrs.html#d:splines for values."
   end
 
+  option :table_comments do
+    long "--table-comments"
+    desc "Display table comment below the table name."
+  end
+
+  option :column_comments do
+    long "--column-comments"
+    desc "Display column comment after the column type."
+  end
+
   separator ""
   separator "Output options:"
 
