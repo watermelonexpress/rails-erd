@@ -54,6 +54,8 @@ module RailsERD
         :only_recursion_depth, nil,
         :prepend_primary, false,
         :cluster, false,
+        :table_comments, false,
+        :column_comments, false,
       ]
     end
 

@@ -150,10 +150,19 @@ module RailsERD
         return "(#{limit})" if limit
       end
 
+      def comment
+        diagram_safe(column.comment)
+      end
+
       private
 
       def native_type
         @model.connection.native_database_types[type] or {}
+      end
+
+      def diagram_safe string
+        return string unless string
+        string.gsub('|', '&#124;')
       end
     end
   end
