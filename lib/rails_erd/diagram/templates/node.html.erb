@@ -10,7 +10,7 @@
 <table border="0" align="left" cellspacing="2" cellpadding="0" width="<%= NODE_WIDTH + 4 %>">
 <%   attributes.each do |attribute| %>
   <tr><td align="left" width="<%= NODE_WIDTH %>" port="<%= attribute %>"><%= attribute %> <font face="<%= FONTS[:italic] %>" color="grey60"><%= attribute.type_description %></font></td></tr>
-  <% if @options[:column_comments] && (column_comment = attribute.comment).present? %>
+  <% if @options[:column_comments] && (column_comment = attribute.comment(entity)).present? %>
   <tr><td align="left"><font face="<%= FONTS[:italic] %>" color="grey60" point-size="6"> &#8594;<%= column_comment %></font></td></tr>
   <% end %>
 <%   end %>

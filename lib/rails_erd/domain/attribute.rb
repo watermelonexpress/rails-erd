@@ -150,8 +150,8 @@ module RailsERD
         return "(#{limit})" if limit
       end
 
-      def comment
-        diagram_safe(column.comment)
+      def comment(entity)
+        diagram_safe(column.comment(entity))
       end
 
       private
